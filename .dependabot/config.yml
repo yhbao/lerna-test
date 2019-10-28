@@ -6,3 +6,4 @@ update_configs:
     update_schedule: "live"
     target_branch: "master"
     version_requirement_updates: "increase_versions"
+    default_labels:"PR: Dependencies"

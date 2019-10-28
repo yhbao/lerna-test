@@ -13,7 +13,7 @@
     "lint": "eslint packages scripts --ext .ts,.tsx,.js,.jsx,.vue",
     "build": "npm run lint && node scripts/build.js",
     "npm-publish": "lerna publish --registry https://registry.npmjs.org && lerna-changelog",
-    "changelog":"cross-env GITHUB_AUTH='87e4c93067ab8a2fc4fc20eb8fcdad3e27357fbf' lerna-changelog",
+    "changelog":"cross-env GITHUB_AUTH='20152c2f517d1ee81f24d764c99c61e61cd926f9' lerna-changelog",
     "prepack": "node scripts/prepack",
     "postpack": "node scripts/postpack",
     "format": "prettier --write \"**/*.{js,jsx,ts,tsx,json,vue}\"",

@@ -2,5 +2,6 @@
 **/dist/
 **/coverage/
 **/.cache/
+**/.changelog/
 !/packages/**/__snapshots__/dist/
 *-error.log

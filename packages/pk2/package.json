@@ -1,0 +1,11 @@
+{
+  "name": "pk2",
+  "version": "1.0.0",
+  "main": "index.js",
+  "devDependencies": {
+    "pk1": "^1.0.0"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}

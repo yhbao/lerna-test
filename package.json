@@ -1,0 +1,47 @@
+{
+  "name": "lerna-test",
+  "version": "0.0.1",
+  "description": "eslint config set",
+  "engines": {
+    "node": ">= 10.16.0"
+  },
+  "private": true,
+  "workspaces": [
+    "packages/*"
+  ],
+  "scripts": {
+    "lint": "eslint packages scripts --ext .ts,.tsx,.js,.jsx,.vue",
+    "build": "npm run lint && node scripts/build.js",
+    "npm-publish": "lerna publish --registry https://registry.npmjs.org && lerna-changelog",
+    "prepack": "node scripts/prepack",
+    "postpack": "node scripts/postpack",
+    "format": "prettier --write \"**/*.{js,jsx,ts,tsx,json,vue}\"",
+    "install": "vta-format-npm-yarn-lock",
+    "bootstrap": "lerna bootstrap --force-local",
+    "dep-upgrade": "rimraf yarn.lock && lerna bootstrap --force-local"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yhbao/lerna-test.git"
+  },
+  "bugs": {
+    "url": "https://github.com/yhbao/lerna-test/issues"
+  },
+  "homepage": "https://github.com/yhbao/lerna-test#readme",
+  "keywords": [
+    "eslint"
+  ],
+  "author": "vta@yhbit.net",
+  "license": "MIT",
+  "devDependencies": {
+    "@vta/format-npm-yarn-lock": "^1.0.0",
+    "eslint": "^6.6.0",
+    "lerna-changelog": "^0.8.2",
+    "prettier": "^1.18.0",
+    "rimraf": "^3.0.0"
+  },
+  "dependencies": {
+    "chalk": "^2.4.0",
+    "fs-extra": "^8.0.0"
+  }
+}
